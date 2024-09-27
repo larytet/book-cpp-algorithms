@@ -28,7 +28,7 @@ The resulting PDF will be in the build folder.
 
 ```sh
 docker build -f .devcontainer/Dockerfile  -t latex-to-epub  .
-docker run -v $(pwd):/data latex-to-epub pandoc /data/main.tex -o /data/book.epub
+docker run -v $(pwd):/data latex-to-epub pandoc /data/book.tex -o /data/book.epub --metadata title="A Complete Guide to Standard C++ Algorithms"
 ```
 
 ### Code samples
