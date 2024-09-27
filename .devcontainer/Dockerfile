@@ -5,4 +5,4 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN set -ex && \
     apt-get update && \
-    apt-get install -y cmake gcc g++
+    apt-get install -y cmake gcc g++ pandoc

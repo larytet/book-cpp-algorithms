@@ -26,6 +26,11 @@ VSCode is configured to use the LaTeX Workshop extension. To build the PDF simpl
 Note that due to the high number of code examples, the build does take a while.
 The resulting PDF will be in the build folder.
 
+```sh
+docker build -f .devcontainer/Dockerfile  -t latex-to-epub  .
+docker run -v $(pwd):/data latex-to-epub pandoc /data/main.tex -o /data/book.epub
+```
+
 ### Code samples
 
 Most code files have wrapping main files that exercise both the build and also contain `assert` expressions that verify correctness of the code.
